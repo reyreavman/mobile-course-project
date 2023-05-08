@@ -15,7 +15,7 @@
         android:theme="@style/Theme.MyApplication">
         <activity
             android:name=".MapActivity"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/title_activity_map"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity

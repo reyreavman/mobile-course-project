@@ -2,9 +2,13 @@ package com.example.myapplication
 import android.content.pm.PackageManager
 import androidx.core.app.ActivityCompat
 
-class CheckingSelfPermissions {
+class CheckingSelfPermissions(_activity: MapActivity) {
+    val activity = _activity
+    init {
+        checkSelfPermissions(activity)
+    }
 
-    fun checkSelfPermissions(activity: MapActivity) {
+    private fun checkSelfPermissions(_activity: MapActivity) {
         if (ActivityCompat.checkSelfPermission(
                 activity,
                 android.Manifest.permission.ACCESS_FINE_LOCATION
