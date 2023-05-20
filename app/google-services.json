@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1074718654328",
+    "firebase_url": "https://creativeproject-db-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "creativeproject-db",
+    "storage_bucket": "creativeproject-db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1074718654328:android:ad10490274d380ad34528d",
+        "android_client_info": {
+          "package_name": "com.example.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1074718654328-95qtca5vovcourdbg2peovbakio7jcuk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-ggwyCs7Uib_GtmZuMTB5pL2lxgtArI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1074718654328-95qtca5vovcourdbg2peovbakio7jcuk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
