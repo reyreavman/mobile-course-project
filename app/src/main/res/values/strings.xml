@@ -3,8 +3,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <!-- Strings related to login -->
     <string name="title_activity_map">MapActivity</string>
+    <string name="title_registration_map">RegistrationActivity</string>
     <string name="loginString">Логин</string>
     <string name="passwordString">Пароль</string>
-    <string name="notRegisteredYet_">Еще не зарегистрированы? Зарегистрируйтесь!</string>
+    <string name="notRegisteredYet_">Еще не зарегистрированы? <u>Зарегистрируйтесь!</u></string>
+    <string name="userName">Имя пользователя</string>
+    <string name="email">Электронная почта</string>
+    <string name="password">Пароль</string>
+    <string name="Registration">Регистрация</string>
+    <string name="SignIn">Войти</string>
 
 </resources>
