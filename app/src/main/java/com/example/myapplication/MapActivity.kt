@@ -1,7 +1,11 @@
 package com.example.myapplication
+
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.tomtom.quantity.Distance
 import com.tomtom.sdk.location.LocationProvider
 import com.tomtom.sdk.location.android.AndroidLocationProvider
@@ -14,19 +18,22 @@ import com.tomtom.sdk.map.display.ui.MapFragment
 import kotlin.time.Duration.Companion.milliseconds
 
 class MapActivity : AppCompatActivity() {
-    val myTag = "myTag"
+    val myTag = "TypeOfActivity"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.map)
         val checkingSelfPermissions = CheckingSelfPermissions(this)
+        val toFindUsersButton: FloatingActionButton = findViewById(R.id.findUsersButton)
+
         val mapOptions = MapOptions(mapKey = "E5GJL8Q4LVnsok7GyIUKefysGlgqTlTg")
         val mapFragment = MapFragment.newInstance(mapOptions)
         supportFragmentManager.beginTransaction().replace(R.id.map_container, mapFragment).commit()
+
         val androidLocationProviderConfig = AndroidLocationProviderConfig(
             minTimeInterval = 100L.milliseconds,
             minDistance = Distance.meters(3.0)
         )
-        val locationProvider: LocationProvider = AndroidLocationProvider (
+        val locationProvider: LocationProvider = AndroidLocationProvider(
             context = applicationContext,
             config = androidLocationProviderConfig
         )
@@ -39,10 +46,17 @@ class MapActivity : AppCompatActivity() {
             tomtomMap.moveCamera(
                 CameraOptions(
                     position = lastLocation,
-                    zoom = 12.0)
+                    zoom = 12.0
+                )
             )
 
         }
+
+        toFindUsersButton.setOnClickListener {
+            val intentToFindUsersActivity = Intent(this@MapActivity, FindUsersActivity::class.java)
+            startActivity(intentToFindUsersActivity)
+        }
+
         Log.i(myTag, "onCreate")
     }
 

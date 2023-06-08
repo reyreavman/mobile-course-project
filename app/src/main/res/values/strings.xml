@@ -10,7 +10,9 @@
     <string name="userName">Имя пользователя</string>
     <string name="email">Электронная почта</string>
     <string name="password">Пароль</string>
-    <string name="Registration">Регистрация</string>
-    <string name="SignIn">Войти</string>
+    <string name="registration">Регистрация</string>
+    <string name="signIn">Войти</string>
+    <string name="inputUsername">Введите имя пользователя</string>
+    <string name="find">Найти</string>
 
 </resources>

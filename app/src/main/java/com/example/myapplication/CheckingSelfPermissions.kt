@@ -1,9 +1,11 @@
 package com.example.myapplication
+
 import android.content.pm.PackageManager
 import androidx.core.app.ActivityCompat
 
-class CheckingSelfPermissions(_activity: MapActivity) {
-    val activity = _activity
+class CheckingSelfPermissions(_ACTIVITY: MapActivity) {
+    val activity = _ACTIVITY
+
     init {
         checkSelfPermissions(activity)
     }
@@ -16,8 +18,11 @@ class CheckingSelfPermissions(_activity: MapActivity) {
                 activity,
                 android.Manifest.permission.ACCESS_COARSE_LOCATION
             ) != PackageManager.PERMISSION_GRANTED
-        ){
-            val permissions = arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION, android.Manifest.permission.ACCESS_COARSE_LOCATION)
+        ) {
+            val permissions = arrayOf(
+                android.Manifest.permission.ACCESS_FINE_LOCATION,
+                android.Manifest.permission.ACCESS_COARSE_LOCATION
+            )
             ActivityCompat.requestPermissions(activity, permissions, 0)
         }
     }

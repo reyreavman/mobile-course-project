@@ -14,6 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".FindUsersActivity"
+            android:exported="true"
+            android:label="FindUsersActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
             android:name=".MapActivity"
             android:exported="true"
             android:label="@string/title_activity_map"
